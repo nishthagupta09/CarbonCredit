@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+#spring:
+# web:
+#  cors:
+#  allowed-origins: "http://localhost:3000"
+#  allowed-methods: "GET,POST,PUT,DELETE,OPTIONS"
+#  allowed-headers: "*"
+#  allow-credentials: true
+spring:
+    data:
+        mongodb:
+            uri: mongodb+srv://nishthaDB:Percy09@cluster0.xib4hn5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+            database: CarbonCreditDB
+            auto-index-creation: true
+
+    mail:
+      host: sandbox.smtp.mailtrap.io
+      port: 587
+      username: 8cf2bef6a2c415
+      password: 57ea7d9715c051
+      protocol: smtp
+      properties:
+          mail:
+             smtp:
+                auth: true
+                starttls:
+                    enable: true
+
+logging:
+  level:
+    org.springframework.data.mongodb.core.MongoTemplate: DEBUG
+
+app:
+  jwt:
+      secret: superSecretKeyHaraDhan1234567890
+      expiryMinutes: 60
+
